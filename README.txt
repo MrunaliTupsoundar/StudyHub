@@ -14,6 +14,11 @@ Bash:
 git https://github.com/MrunaliTupsoundar/StudyHub.git
 cd [your-project-folder]
 
+Create the .env file:
+Navigate to your backend folder.
+Create a new file named .env (make sure it starts with a dot).
+Add the following line to the file:
+FLASK_SECRET=RANDOM_STRING
 
 Create a Virtual Environment
 It's recommended to use a virtual environment to manage dependencies.
