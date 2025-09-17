@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Educators - StudyHub</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <aside class="sidebar">
+        <div class="logo">
+          <img class="logo" src="images/logo .jpg" alt="logo" />
+        </div>
+        <nav class="side-nav">
+          <ul>
+            <li onclick="location.href='index.html'">➔ My courses</li>
+            <li onclick="location.href='educators.html'">➔ Educator</li>
+            <li onclick="location.href='test.html'">➔ Test</li>
+            <li onclick="location.href='report.html'">➔ Report</li>
+            <li onclick="location.href='feedback.html'" class="active">
+              ➔ Feedback
+            </li>
+            <li onclick="location.href='certificate.html'">➔ Certificates</li>
+          </ul>
+        </nav>
+      </aside>
+
+      <section class="content">
+        <header>
+          <div class="top-nav">
+            <button onclick="location.href='index.html'">Home</button>
+            <button onclick="location.href='contact.html'">Contact Us</button>
+            <button onclick="location.href='about.html'">About Us</button>
+            <button onclick="location.href='login.html'" class="logout">
+              Log out
+            </button>
+            <div
+              onclick="location.href='dashboard.html'"
+              class="profile-circle"
+            ></div>
+          </div>
+        </header>
+
+        <main>
+          <h2 style="text-align: center">Top educators to learn from</h2>
+          <div
+            style="
+              display: flex;
+              justify-content: space-around;
+              flex-wrap: wrap;
+              gap: 24px;
+              margin-top: 30px;
+            "
+          >
+            <!-- Educator 1 -->
+            <div class="course-card" style="width: 250px">
+              <img
+                src="images/person.jpg"
+                alt="Mr. Smith"
+                style="height: 150px"
+              />
+              <div class="details">
+                <strong>Mr. Smith</strong><br />
+                Verbal Ability & Reading Comprehension<br />
+                <small><strong>Experience:</strong> Teaching since 2015</small
+                ><br />
+                <small
+                  >Watch Mins: 38M<br />Followers: 19K<br />Badge: MASTER</small
+                ><br />
+                <button>+view more</button>
+              </div>
+            </div>
+
+            <!-- Educator 2 -->
+            <div class="course-card" style="width: 250px">
+              <img
+                src="images/person3.jpeg"
+                alt="Mr. Jones"
+                style="height: 150px"
+              />
+              <div class="details">
+                <strong>Mr. Jones</strong><br />
+                Logical Reasoning & DI<br />
+                <small
+                  ><strong>Experience:</strong> CAT 99.8 percentile<br />8+
+                  years teaching</small
+                ><br />
+                <small
+                  >Watch Mins: 22M<br />Followers: 12K<br />Badge: EXPERT</small
+                ><br />
+                <button>+view more</button>
+              </div>
+            </div>
+
+            <!-- Educator 3 -->
+            <div class="course-card" style="width: 250px">
+              <img
+                src="images/person2.jpg"
+                alt="Dr. Garcia"
+                style="height: 150px"
+              />
+              <div class="details">
+                <strong>Dr. Garcia</strong><br />
+                Quantitative Aptitude<br />
+                <small
+                  ><strong>Experience:</strong> 10+ years guiding CAT,
+                  GRE</small
+                ><br />
+                <small
+                  >Watch Mins: 48M<br />Followers: 25K<br />Badge: LEGEND</small
+                ><br />
+                <button>+view more</button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </section>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

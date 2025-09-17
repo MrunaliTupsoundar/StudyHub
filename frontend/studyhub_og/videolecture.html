@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecture - Human Computer Interaction</title>
+    <link rel="stylesheet" href="css/styles2.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <img class="logo" src="images/logo .jpg" alt="logo" />
+            </div>
+            <nav class="side-nav">
+                <ul>
+                    <li onclick="location.href='index.html'">➔ My courses</li>
+                    <li onclick="location.href='educators.html'">➔ Educator</li>
+                    <li onclick="location.href='test.html'">➔ Test</li>
+                    <li onclick="location.href='report.html'">➔ Report</li>
+                    <li onclick="location.href='feedback.html'">➔ Feedback</li>
+                    <li onclick="location.href='certificate.html'">➔ Certificates</li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Content -->
+        <section class="content">
+            <header>
+                <div class="top-nav">
+                    <button onclick="location.href='index.html'">Home</button>
+                    <button onclick="location.href='contact.html'">Contact Us</button>
+                    <button onclick="location.href='about.html'">About Us</button>
+                    <button onclick="sessionStorage.removeItem('isLoggedIn'); location.href='login.html'" class="logout">Log out</button>
+                    <div onclick="location.href='dashboard.html'" class="profile-circle"></div>
+                </div>
+            </header>
+
+            <main>
+                <h2>Introduction to Human Computer Interaction</h2>
+                <video width="640" height="360" controls>
+                    <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <h3>Lecture 1</h3>
+                <a href="#" class="download-link" download>Download Notes</a>
+                <h3>Key Takeaways:</h3>
+                <ul>
+                    <li>What is HCI?</li>
+                    <li>Good vs. Bad Design</li>
+                    <li>Building HCI Projects</li>
+                    <li>Human Computer Interaction</li>
+                    <li>UX Design</li>
+                </ul>
+            </main>
+        </section>
+    </div>
+</body>
+</html>

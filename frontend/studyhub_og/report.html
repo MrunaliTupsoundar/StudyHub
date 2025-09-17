@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Report - StudyHub</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <header>
+    <div class="header-left">
+      <img src="images/logo .jpg" class="logo-img" alt="StudyHub Logo" />
+      <span class="logo-text"></span>
+    </div>
+    <div class="header-right">
+      <button onclick="location.href='index.html'">Home</button>
+      <button onclick="location.href='contact.html'">Contact Us</button>
+      <button onclick="location.href='about.html'">About Us</button>
+      <button onclick="location.href='login.html'" class="logout">Log out</button>
+      <div onclick="location.href='dashboard.html'" class="profile-circle"></div>
+    </div>
+  </header>
+  <!-- Main layout: Sidebar + Main Content Centered -->
+  <div class="main-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <nav class="side-nav">
+        <ul>
+          <li onclick="location.href='index.html'">➔ My courses</li>
+          <li onclick="location.href='educators.html'">➔ Educator</li>
+          <li onclick="location.href='test.html'">➔ Test</li>
+          <li onclick="location.href='report.html'"class="active">➔ Report</li>
+          <li onclick="location.href='feedback.html'">➔ Feedback</li>
+          <li onclick="location.href='certificate.html'">➔ Certificates</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Content, centered -->
+    <main class="center-content">
+      <div class="generate-report-title">Generate Report</div>
+      <div class="date-inputs">
+        <button class="date-btn"><span>Enter Start date</span><img src="https://i.imgur.com/3cF2C8h.png"/></button>
+        <button class="date-btn"><span>Enter end date</span><img src="https://i.imgur.com/3cF2C8h.png"/></button>
+      </div>
+      <button class="submit-btn">SUBMIT</button>
+      <div class="report-table-container">
+        <table>
+          <tr>
+            <th>Std ID</th>
+            <th>Std Name</th>
+            <th>Marks</th>
+            <th>Percentage</th>
+            <th>Grade</th>
+            <th>Remark</th>
+          </tr>
+          <tr><td>GA-001</td><td>Jhon</td><td>285</td><td>71.25</td><td>A</td><td>Pass</td></tr>
+          <tr><td>GA-002</td><td>Smith</td><td>248</td><td>62</td><td>B</td><td>Pass</td></tr>
+          <tr><td>GA-003</td><td>Emma</td><td>329</td><td>82.25</td><td>A+</td><td>Pass</td></tr>
+          <tr><td>GA-004</td><td>Sandy</td><td>249</td><td>62.25</td><td>B</td><td>Pass</td></tr>
+          <tr><td>GA-005</td><td>Olivea</td><td>150</td><td>37.5</td><td>F</td><td>Fail</td></tr>
+          <tr><td>GA-006</td><td>James</td><td>187</td><td>46.75</td><td>D</td><td>Pass</td></tr>
+          <tr><td>GA-007</td><td>Eva</td><td>352</td><td>88</td><td>A+</td><td>Pass</td></tr>
+          <tr><td>GA-008</td><td>Noah</td><td>282</td><td>69.75</td><td>B</td><td>Pass</td></tr>
+          <tr><td>GA-009</td><td>Charlotte</td><td>282</td><td>70.5</td><td>A</td><td>Pass</td></tr>
+          <tr><td>GA-010</td><td>Elijah</td><td>301</td><td>75.25</td><td>A</td><td>Pass</td></tr>
+        </table>
+      </div>
+    </main>
+  </div>
+  <script>
+    document.querySelectorAll('.date-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        alert('Date picker popup (to be implemented)');
+      });
+    });
+  </script>
+</body>
+</html>

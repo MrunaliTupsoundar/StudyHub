@@ -1,0 +1,129 @@
+<!-- http://127.0.0.1:5000/studyhub_og/register.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register - StudyHub</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .password-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+    .password-wrapper input {
+      width: 100%;
+      padding-right: 40px;
+    }
+    .toggle-password {
+      position: absolute;
+      right: 10px;
+      cursor: pointer;
+      font-size: 18px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo"><img src="images/logo .jpg" alt="StudyHub Logo"></div>
+      <div class="nav-buttons">
+        <button onclick="location.href='contact.html'">Contact Us</button>
+        <button onclick="location.href='about.html'">About Us</button>
+        <button class="join" onclick="location.href='login.html'">Join now</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="login-form">
+        <!-- Removed action/method, added id for JS -->
+        <form id="regForm">
+          <h1>Create Your Account</h1>
+
+          <label>Username</label>
+          <input type="text" name="username" placeholder="Enter your username" required />
+
+          <label>Email or Mobile</label>
+          <input type="text" name="email" placeholder="Enter your email or mobile" required />
+
+          <label>Password</label>
+          <div class="password-wrapper">
+            <input type="password" name="password" id="password" placeholder="Enter password" required />
+            <span class="toggle-password" onclick="togglePassword('password', this)">👁️</span>
+          </div>
+
+          <label>Confirm Password</label>
+          <div class="password-wrapper">
+            <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm password" required />
+            <span class="toggle-password" onclick="togglePassword('confirm_password', this)">👁️</span>
+          </div>
+
+          <button type="submit" class="login">REGISTER</button>
+          <p>Already have an account? <a href="login.html">Login</a></p>
+        </form>
+        <p id="msg" style="color:red;"></p>
+      </section>
+
+      <section class="illustration">
+        <div class="circle-group"><img src="images/loginPhoto.jpg" /></div>
+        <div class="description">
+          <h3>Welcome to your learning space!</h3>
+          <p>
+            Prepare for exams, upgrade your skills, and chase your dream job.
+            Explore expert-designed video courses, take quizzes, and earn certificates that matter.
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+  console.log("✅ Register page script loaded");
+
+  function togglePassword(fieldId, icon) {
+    const field = document.getElementById(fieldId);
+    if (field.type === "password") { field.type = "text"; icon.textContent = "🙈"; }
+    else { field.type = "password"; icon.textContent = "👁️"; }
+  }
+
+  const form = document.getElementById('regForm');
+  if (!form) {
+    console.error("❌ regForm not found");
+  } else {
+    form.addEventListener('submit', async function(e){
+      e.preventDefault();
+      console.log("🟢 Register form submitted");
+
+      const pw = document.getElementById('password').value;
+      const cpw = document.getElementById('confirm_password').value;
+      if (pw !== cpw) {
+        document.getElementById('msg').innerText = 'Passwords do not match!';
+        return;
+      }
+
+      try {
+        const data = new FormData(e.target);
+        const resp = await fetch('/api/register', {method:'POST', body:data});
+        console.log("Response status:", resp.status);
+        const j = await resp.json();
+        console.log("Response json:", j);
+
+        if(j.success){
+          window.location = 'login.html';
+        } else {
+          document.getElementById('msg').innerText = j.error || 'Registration failed';
+        }
+      } catch (err) {
+        console.error("Error during registration:", err);
+        document.getElementById('msg').innerText = 'Something went wrong!';
+      }
+    });
+  }
+</script>
+
+
+</body>
+</html>

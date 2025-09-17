@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>StudyHub - Courses</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <aside class="sidebar">
+        <div class="logo">
+          <img class="logo" src="images/logo .jpg" alt="logo" />
+        </div>
+        <nav class="side-nav">
+          <ul>
+            <li onclick="location.href='index.html'">➔ My courses</li>
+            <li onclick="location.href='educators.html'">➔ Educator</li>
+            <li onclick="location.href='test.html'">➔ Test</li>
+            <li onclick="location.href='report.html'">➔ Report</li>
+            <li onclick="location.href='feedback.html'">➔ Feedback</li>
+            <li onclick="location.href='certificate.html'">➔ Certificates</li>
+          </ul>
+        </nav>
+      </aside>
+
+      <section class="content">
+        <header>
+          <div class="top-nav">
+            <button onclick="location.href='index.html'">Home</button>
+            <button onclick="location.href='contact.html'">Contact Us</button>
+            <button onclick="location.href='about.html'">About Us</button>
+            <button onclick="location.href='login.html'" class="logout">Log out</button>
+            <div onclick="location.href='dashboard.html'" class="profile-circle"></div>
+          </div>
+        </header>
+
+        <main>
+          <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap;">
+            <!-- Left section with main course -->
+            <div class="course-card" style="width: 45%;">
+              <img src="images/course-placeholder.png" alt="AIML" />
+              <div class="details">
+                <span class="title">AIML</span>
+                <span class="level beginner">Beginner</span>
+                <span class="author">Author</span>
+                <button onclick="location.href='course-details.html'">LEARN MORE</button>
+              </div>
+            </div>
+
+            <!-- Right section with description -->
+            <div style="width: 50%; padding: 20px;">
+              <div style="background: #fff; padding: 20px; border: 1px solid #ccc; border-radius: 12px;">
+                <p>
+                  <strong>The Advanced Certificate Programme in Applied Artificial Intelligence and Machine Learning</strong>
+                  is for tech professionals who want to leverage cutting-edge advancements to drive innovation and tackle complex problems.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <h2 style="margin-top: 40px;">Explore Our Courses</h2>
+          <div class="courses-grid">
+            <div class="course-card">
+              <img src="images/course-placeholder.png" alt="AI" />
+              <div class="details">
+                <span class="title">AI</span>
+                <span class="level beginner">Beginner</span>
+                <span class="author">Author</span>
+                <button>Enroll</button>
+              </div>
+            </div>
+
+            <div class="course-card">
+              <img src="images/course-placeholder.png" alt="Python" />
+              <div class="details">
+                <span class="title">Python</span>
+                <span class="level advanced">Advanced</span>
+                <span class="author">Author</span>
+                <button>Enroll</button>
+              </div>
+            </div>
+
+            <div class="course-card">
+              <img src="images/course-placeholder.png" alt="Power BI" />
+              <div class="details">
+                <span class="title">Power BI</span>
+                <span class="level advanced">Advanced</span>
+                <span class="author">Author</span>
+                <button>Enroll</button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </section>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

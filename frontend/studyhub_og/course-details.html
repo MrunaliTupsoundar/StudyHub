@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AIML Course - StudyHub</title>
+    <link rel="stylesheet" href="css/styles2.css" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <aside class="sidebar">
+        <div class="logo">
+          <img class="logo" src="images/logo .jpg" alt="logo" />
+        </div>
+        <nav class="side-nav">
+          <ul>
+            <li onclick="location.href='index.html'">➔ My courses</li>
+            <li onclick="location.href='educators.html'">➔ Educator</li>
+            <li onclick="location.href='test.html'">➔ Test</li>
+            <li onclick="location.href='report.html'">➔ Report</li>
+            <li onclick="location.href='feedback.html'">➔ Feedback</li>
+            <li onclick="location.href='certificate.html'">➔ Certificates</li>
+          </ul>
+        </nav>
+      </aside>
+
+      <section class="content">
+        <header>
+          <div class="top-nav">
+            <button onclick="location.href='index.html'">Home</button>
+            <button onclick="location.href='contact.html'">Contact Us</button>
+            <button onclick="location.href='about.html'">About Us</button>
+            <button onclick="sessionStorage.removeItem('isLoggedIn'); location.href='login.html'" class="logout">Log out</button>
+            <div onclick="location.href='dashboard.html'" class="profile-circle"></div>
+          </div>
+        </header>
+
+        <main>
+          <div style="display: flex; gap: 40px; flex-wrap: wrap">
+            <!-- Left Side -->
+            <div style="width: 40%">
+              <div class="course-card">
+                <img src="images/course-placeholder.png" alt="AIML" />
+                <div class="details">
+                  <span class="title">AIML</span>
+                  <span class="level beginner">Beginner</span>
+                  <span class="author">Author</span>
+                  <button onclick="location.href='videolecture.html'">START</button>
+                </div>
+              </div>
+              <div
+                style="
+                  margin-top: 20px;
+                  background: #fff;
+                  padding: 20px;
+                  border: 1px solid #ccc;
+                  border-radius: 10px;
+                "
+              >
+                <p>
+                  <strong
+                    >The Advanced Certificate Programme in Applied Artificial
+                    Intelligence and Machine Learning</strong
+                  >
+                </p>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  justify-content: space-around;
+                  margin-top: 20px;
+                  font-weight: bold;
+                "
+              >
+                <div>
+                  <div>4/5</div>
+                  <small>Rating</small>
+                </div>
+                <div>
+                  <div>25645</div>
+                  <small>Student</small>
+                </div>
+                <div>
+                  <div>20 hour</div>
+                  <small>Total Hour</small>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Side -->
+            <div style="flex: 1">
+              <h3>Section 1 &mdash; Intro & Getting Started</h3>
+              <p>1 hour</p>
+              <ul>
+                <li> Welcome to Course</li>
+                <li> Tools and Setup</li>
+              </ul>
+
+              <h3>Section 2 &mdash; Documents objects</h3>
+              <p>1 hour</p>
+              <ul>
+                <li> Section Info</li>
+                <li> Truthy and Falsy</li>
+              </ul>
+
+              <h3>Section 3 &mdash; Summary and Certificate</h3>
+              <p>1 Second</p>
+              <ul>
+                <li> Summary</li>
+                <li> Certificate</li>
+              </ul>
+            </div>
+          </div>
+        </main>
+      </section>
+    </div>
+  </body>
+</html>

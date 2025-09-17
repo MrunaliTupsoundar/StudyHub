@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - StudyHub</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo"><img src="images/logo .jpg" alt="StudyHub Logo"></div>
+      <div class="nav-buttons">
+        <button onclick="location.href='contact.html'">Contact Us</button>
+        <button onclick="location.href='about.html'">About Us</button>
+        <button class="join" onclick="location.href='login.html'">Join now</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="login-form">
+        <!-- Removed action/method, added id for JS -->
+        <form id="loginForm">
+          <h1>Welcome Back</h1>
+
+          <label>Username</label>
+          <input type="text" name="username" placeholder="Enter your username" required />
+
+          <label>Password</label>
+          <input type="password" name="password" placeholder="Enter your password" required />
+
+          <a href="#">Forget Password?</a>
+          <button type="submit" class="login">LOGIN</button>
+          <p>Don't have an account? <a href="register.html">Sign up now</a></p>
+        </form>
+        <p id="msg" style="color:red;"></p>
+      </section>
+
+      <section class="illustration">
+        <div class="circle-group"><img src="images/loginPhoto.jpg" /></div>
+        <div class="description">
+          <h3>Welcome to your learning space!</h3>
+          <p>
+            Prepare for exams, upgrade your skills, and chase your dream job.
+            Explore expert-designed video courses, take quizzes, and earn certificates that matter.
+          </p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script>
+  document.getElementById('loginForm').addEventListener('submit', async function(e){
+    e.preventDefault();
+    const data = new FormData(e.target);
+    const resp = await fetch('/api/login',{method:'POST',body:data});
+    const j = await resp.json();
+    if(j.success){
+      window.location = j.redirect || '/studyhub_og/index.html';
+    }else{
+      document.getElementById('msg').innerText = j.error || 'Login failed';
+    }
+  });
+  </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Feedback - StudyHub</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <header>
+    <div class="header-left">
+      <img src="images/logo .jpg" class="logo-img" alt="StudyHub Logo" />
+      <span class="logo-text"></span>
+    </div>
+    <div class="header-right">
+      <button onclick="location.href='index.html'">Home</button>
+      <button onclick="location.href='contact.html'">Contact Us</button>
+      <button onclick="location.href='about.html'">About Us</button>
+      <button onclick="location.href='login.html'" class="logout">Log out</button>
+      <div onclick="location.href='dashboard.html'" class="profile-circle"></div>
+    </div>
+  </header>
+
+  <div class="main-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <nav class="side-nav">
+        <ul>
+          
+          <li onclick="location.href='index.html'">➔ My courses</li>
+          <li onclick="location.href='educators.html'">➔ Educator</li>
+          <li onclick="location.href='test.html'">➔ Test</li>
+          <li onclick="location.href='report.html'">➔ Report</li>
+          <li onclick="location.href='feedback.html'" class="active">➔ Feedback</li>
+          <li onclick="location.href='certificate.html'">➔ Certificates</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Content Centered -->
+    <main class="center-content">
+      <div class="feedback-container">
+        <h2>We value your Opinion.</h2>
+        <p>How would you rate our overall experience ?</p>
+        <div class="star-rating">
+          <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+        </div>
+        <p>kindly take a moment to tell us what you think !</p>
+        <textarea class="feedback-text" placeholder="Your feedback here..."></textarea>
+        <button class="submit-btn">SUBMIT</button>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

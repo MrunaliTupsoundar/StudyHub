@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test - HCI</title>
+    <link rel="stylesheet" href="css/styles2.css" />
+    <script>
+      let seconds = 1800;
+      function startTimer() {
+        const timer = setInterval(() => {
+          const min = String(Math.floor(seconds / 60)).padStart(2, "0");
+          const sec = String(seconds % 60).padStart(2, "0");
+          document.getElementById("countdown").textContent = min + ":" + sec;
+          if (seconds-- <= 0) clearInterval(timer);
+        }, 1000);
+      }
+      window.onload = startTimer;
+    </script>
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <img class="logo" src="images/logo .jpg" alt="logo" />
+        </div>
+        <nav class="side-nav">
+          <ul>
+            <li onclick="location.href='index.html'">➔ My courses</li>
+            <li onclick="location.href='educators.html'">➔ Educator</li>
+            <li onclick="location.href='test.html'">➔ Test</li>
+            <li onclick="location.href='report.html'">➔ Report</li>
+            <li onclick="location.href='feedback.html'">➔ Feedback</li>
+            <li onclick="location.href='certificate.html'">➔ Certificates</li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Content -->
+      <section class="content">
+        <header>
+          <div class="top-nav">
+            <button onclick="location.href='index.html'">Home</button>
+            <button onclick="location.href='contact.html'">Contact Us</button>
+            <button onclick="location.href='about.html'">About Us</button>
+            <button onclick="sessionStorage.removeItem('isLoggedIn'); location.href='login.html'" class="logout">
+              Log out
+            </button>
+            <div
+              onclick="location.href='dashboard.html'"
+              class="profile-circle"
+            ></div>
+          </div>
+        </header>
+        <main>
+          <h2>Introduction to Human Computer Interaction - Test 01</h2>
+          <div>⏳ <span id="countdown">30:00</span></div>
+          <form class="test-form">
+            <ol>
+              <li>
+                HCI is based on psychological factors of humans?<br />
+                <input type="radio" name="q1" /> True
+                <input type="radio" name="q1" /> False
+              </li>
+              <li>
+                What does HCI stand for?<br />
+                <input type="radio" name="q2" /> Human Computer Interface
+                <input type="radio" name="q2" /> Human Computer Interaction
+                <input type="radio" name="q2" /> Human Computer Implementation
+                <input type="radio" name="q2" /> Human Computer Industry
+              </li>
+              <li>
+                Which of the following are important in the design focus of HCI?<br />
+                <input type="radio" name="q3" /> Thinking of the user
+                <input type="radio" name="q3" /> Testing the HCI
+                <input type="radio" name="q3" /> Involving the users
+                <input type="radio" name="q3" /> All of the above
+              </li>
+              <li>
+                Which of the following are examples of paradigms for interaction?<br />
+                <input type="radio" name="q4" /> Personal computing
+                <input type="radio" name="q4" /> Hypertext
+                <input type="radio" name="q4" /> Multi-modality
+                <input type="radio" name="q4" /> All of the above
+              </li>
+            </ol>
+            <button type="submit">Submit</button>
+          </form>
+        </main>
+      </section>
+    </div>
+  </body>
+</html>

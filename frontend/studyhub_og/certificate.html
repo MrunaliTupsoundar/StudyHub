@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Certificates</title>
+    <link rel="stylesheet" href="css/styles2.css" />
+  </head>
+  <body>
+    <div class="main-wrapper">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <img class="logo" src="images/logo .jpg" alt="logo" />
+        </div>
+        <nav class="side-nav">
+          <ul>
+            <li onclick="location.href='index.html'">➔ My courses</li>
+            <li onclick="location.href='educators.html'">➔ Educator</li>
+            <li onclick="location.href='test.html'">➔ Test</li>
+            <li onclick="location.href='report.html'">➔ Report</li>
+            <li onclick="location.href='feedback.html'">➔ Feedback</li>
+            <li onclick="location.href='certificate.html'">➔ Certificates</li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Content -->
+      <section class="content">
+        <header>
+          <div class="top-nav">
+            <button onclick="location.href='index.html'">Home</button>
+            <button onclick="location.href='contact.html'">Contact Us</button>
+            <button onclick="location.href='about.html'">About Us</button>
+            <button onclick="sessionStorage.removeItem('isLoggedIn'); location.href='login.html'" class="logout">
+              Log out
+            </button>
+            <div
+              onclick="location.href='dashboard.html'"
+              class="profile-circle"
+            ></div>
+          </div>
+        </header>
+
+        <main>
+          <h2>Download Certificates</h2>
+          <div class="courses-grid">
+            <div class="course-card">
+              <img src="images/course-placeholder.png" alt="AIML" />
+              <div class="details">
+                <span class="title">AIML</span>
+                <span class="level beginner">Beginner</span>
+                <button onclick="location.href='#'">Download</button>
+              </div>
+            </div>
+            <div class="course-card">
+              <img src="images/course-placeholder.png" alt="AIML" />
+              <div class="details">
+                <span class="title">ML</span>
+                <span class="level intermediate">Intermediate</span>
+                <button onclick="location.href='#'">Download</button>
+              </div>
+            </div>
+            <div class="course-card">
+              <img src="images/course-placeholder.png" alt="AIML" />
+              <div class="details">
+                <span class="title">UI/UX</span>
+                <span class="level intermediate">Intermediate</span>
+                <button onclick="location.href='#'">Download</button>
+              </div>
+            </div>
+          </div>
+        </main>
+      </section>
+    </div>
+  </body>
+</html>

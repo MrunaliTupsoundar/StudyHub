@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard - StudyHub</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Top Navigation Bar -->
+  <header>
+    <div class="header-left">
+      <img src="images/logo .jpg" class="logo-img" alt="StudyHub Logo" />
+      <span class="logo-text"></span>
+    </div>
+    <div class="header-right">
+      <button onclick="location.href='index.html'">Home</button>
+      <button onclick="location.href='contact.html'">Contact Us</button>
+      <button onclick="location.href='about.html'">About Us</button>
+      <button onclick="location.href='login.html'" class="logout">Log out</button>
+      <div onclick="location.href='dashboard.html'" class="profile-circle"></div>
+    </div>
+  </header>
+
+  <div class="main-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <nav class="side-nav">
+        <ul>
+          <li onclick="location.href='index.html'">➔ My courses</li>
+          <li onclick="location.href='educators.html'">➔ Educator</li>
+          <li onclick="location.href='test.html'">➔ Test</li>
+          <li onclick="location.href='report.html'">➔ Report</li>
+          <li onclick="location.href='feedback.html'">➔ Feedback</li>
+          <li onclick="location.href='certificate.html'">➔ Certificates</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Dashboard Content -->
+    <main class="dashboard-content">
+      <!-- User Profile Section -->
+      <div class="user-profile-section">
+        <div class="user-avatar">
+          <img src="https://img.icons8.com/color/96/000000/user-female-circle.png" alt="User Avatar" />
+        </div>
+        <div class="user-info">
+          <p class="username">Username : Alice</p>
+          <button class="edit-profile-btn">Edit Profile</button>
+        </div>
+      </div>
+
+      <!-- Leaderboard Modal -->
+      <div class="leaderboard-modal">
+        <div class="leaderboard-header">
+          <h3>Leaderboard</h3>
+          <button class="close-btn">✕</button>
+        </div>
+        <div class="leaderboard-content">
+          <div class="leaderboard-item rank-1">
+            <span class="rank">1</span>
+            <span class="name">Constance Wang</span>
+            <span class="score">8300</span>
+          </div>
+          <div class="leaderboard-item rank-2">
+            <span class="rank">2</span>
+            <span class="name">Patty O'Furniture</span>
+            <span class="score">7200</span>
+          </div>
+          <div class="leaderboard-item rank-3">
+            <span class="rank">3</span>
+            <span class="name">Olive Yew</span>
+            <span class="score">7100</span>
+          </div>
+          <div class="leaderboard-item">
+            <span class="rank">4</span>
+            <span class="name">Aida Bugg</span>
+            <span class="score">7000</span>
+          </div>
+          <div class="leaderboard-item">
+            <span class="rank">5</span>
+            <span class="name">Maureen Biologist</span>
+            <span class="score">6900</span>
+          </div>
+          <div class="leaderboard-item">
+            <span class="rank">6</span>
+            <span class="name">Teri Dactyl</span>
+            <span class="score">6800</span>
+          </div>
+          <div class="leaderboard-item">
+            <span class="rank">7</span>
+            <span class="name">Peg Legge</span>
+            <span class="score">6700</span>
+          </div>
+          <div class="leaderboard-item">
+            <span class="rank">8</span>
+            <span class="name">Allie Grater</span>
+            <span class="score">6600</span>
+          </div>
+          <div class="leaderboard-item">
+            <span class="rank">9</span>
+            <span class="name">Liz Erd</span>
+            <span class="score">6500</span>
+          </div>
+          <div class="leaderboard-item">
+            <span class="rank">10</span>
+            <span class="name">A. Mused</span>
+            <span class="score">6400</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Activity Calendar -->
+      <div class="activity-calendar">
+        <div class="calendar-months">
+          <span>Aug</span>
+          <span>Sep</span>
+          <span>Oct</span>
+          <span>Nov</span>
+          <span>Dec</span>
+          <span>Jan</span>
+          <span>Feb</span>
+          <span>Mar</span>
+          <span>Apr</span>
+          <span>May</span>
+          <span>Jun</span>
+          <span>Jul</span>
+        </div>
+        <div class="calendar-grid">
+          <div class="calendar-labels">
+            <span>Mon</span>
+            <span>Wed</span>
+            <span>Fri</span>
+          </div>
+          <div class="calendar-squares">
+            <!-- Calendar squares will be generated here -->
+            <div class="calendar-row">
+              <div class="square"></div>
+              <div class="square"></div>
+              <div class="square"></div>
+              <div class="square"></div>
+              <div class="square"></div>
+              <div class="square"></div>
+              <div class="square"></div>
+              <div class="square"></div>
+              <div class="square"></div>
+              <div class="square"></div>
+              <div class="square"></div>
+              <div class="square"></div>
+            </div>
+            <div class="calendar-row">
+              <div class="square"></div>
+              <div class="square"></div>
+              <div class="square"></div>
+              <div class="square"></div>
+              <div class="square"></div>
+              <div class="square"></div>
+              <div class="square"></div>
+              <div class="square"></div>
+              <div class="square"></div>
+              <div class="square"></div>
+              <div class="square"></div>
+              <div class="square"></div>
+            </div>
+            <div class="calendar-row">
+              <div class="square"></div>
+              <div class="square"></div>
+              <div class="square"></div>
+              <div class="square"></div>
+              <div class="square"></div>
+              <div class="square"></div>
+              <div class="square"></div>
+              <div class="square active"></div>
+              <div class="square"></div>
+              <div class="square"></div>
+              <div class="square"></div>
+              <div class="square"></div>
+            </div>
+          </div>
+        </div>
+        <div class="calendar-footer">
+          <span class="learn-more">Learn how we count contributions</span>
+          <div class="activity-legend">
+            <span>Less</span>
+            <div class="legend-squares">
+              <div class="legend-square level-0"></div>
+              <div class="legend-square level-1"></div>
+              <div class="legend-square level-2"></div>
+              <div class="legend-square level-3"></div>
+              <div class="legend-square level-4"></div>
+            </div>
+            <span>More</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- View More Button -->
+      <button class="view-more-btn">View more</button>
+
+      <!-- Streak Counter -->
+      <div class="streak-counter">
+        <div class="fire-icon">🔥</div>
+        <div class="streak-number">98</div>
+        <div class="streak-text">Continue journey with us</div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
