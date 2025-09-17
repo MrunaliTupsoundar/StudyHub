@@ -1,54 +1,60 @@
-StudyHub: Your Personal Study Companion
-Overview
-This guide will walk you through setting up and running the StudyHub application.
+# StudyHub
 
-Prerequisites
-You need the following installed:
+StudyHub is a simple web-based study companion to help students stay organized and focused.  
 
-Python
+## Installation
 
-pip (Python package installer)
-
-Setup and Installation
-1. Clone the Repository
-To get started, clone the project from its GitHub repository.
-
-git clone [https://github.com/MrunaliTupsoundar/StudyHub.git](https://github.com/MrunaliTupsoundar/StudyHub.git)
+### 1. Clone the Repository
+```bash
+git clone https://github.com/MrunaliTupsoundar/StudyHub.git
 cd StudyHub
+```
 
-2. Create the .env file
-Navigate to your backend folder and create a new file named .env.
-
+### 2. Create the `.env` File
+Inside the `backend` folder, create a file named `.env` and add:
+```env
 FLASK_SECRET=RANDOM_STRING
+```
 
-3. Create and Activate a Virtual Environment
-Create a virtual environment to manage dependencies.
+### 3. Create and Activate a Virtual Environment
+**Windows:**
+```bash
+python -m venv venv
+.
+env\Scripts ctivate
+```
 
-Create the virtual environment:
+**macOS / Linux:**
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
 
-Windows: python -m venv venv
-
-macOS / Linux: python3 -m venv venv
-
-Activate the virtual environment:
-
-Windows: .\venv\Scripts\activate
-
-macOS / Linux: source venv/bin/activate
-
-4. Install Dependencies
-Install all required packages.
-
+### 4. Install Dependencies
+```bash
 pip install -r requirements.txt
+```
 
-Running the Application
-1. Run the Main Application File
-Start the application by executing app.py.
+## Usage
 
+### 5. Start the Server
+```bash
 python app.py
+```
 
-2. Access the Web Interface
-Once the server is running, go to the following URL:
-
+### 6. Access the Web Interface
+Once the server is running, open your browser and go to:
+```
 http://127.0.0.1:5000/studyhub_og/register.html
+```
 
+## Contributing
+
+Pull requests are welcome. For major changes, please open an issue first  
+to discuss what you would like to change.  
+
+Please make sure to update tests as appropriate.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
