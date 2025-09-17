@@ -1,80 +1,57 @@
+StudyHub
+Welcome to Your StudyHub! This guide will walk you through setting up and running the application.
 
-# StudyHub
+Prerequisites:
+Python
+pip (Python package installer)
 
-## Project Structure
-backend/
-├── app.py               # Flask backend with /register, /login, /logout routes
-├── requirements.txt     # Python dependencies
-├── .env.example         # Example env vars to configure DB and Flask secret
-frontend/
-└── ...                  # Original HTML/CSS/assets (unchanged)
+Setup and Installation
+Clone the Repository
+If you haven't already, clone this repository to your local machine.
 
-## Setup & Run (Development)
+Bash:
 
-1. **Install Python 3.10+** and `pip`.  
+git https://github.com/MrunaliTupsoundar/StudyHub.git
+cd [your-project-folder]
 
-2. **Create a virtual environment** and activate it:  
 
-   **Linux/macOS:**  
-   ```bash
-   python -m venv venv
-   source venv/bin/activate
+Create a Virtual Environment
+It's recommended to use a virtual environment to manage dependencies.
 
-**Windows:**
-
-```cmd
+Windows:
+Bash
 python -m venv venv
-venv\Scripts\activate
-```
 
-3. **Install dependencies**:
+macOS / Linux:
+Bash
+python3 -m venv venv
 
-   ```bash
-   pip install -r backend/requirements.txt
-   ```
+Activate the Virtual Environment
 
-4. **Configure environment variables**:
+Windows:
+Bash
+.\venv\Scripts\activate
 
-   * Copy the example file:
+macOS / Linux:
+Bash
+source venv/bin/activate
 
-     ```bash
-     cp backend/.env.example backend/.env
-     ```
 
-   * Edit `.env` and set your MySQL credentials and Flask secret:
+Install Dependencies
+Install all the required packages listed in requirements.txt.
+Bash:
+pip install -r requirements.txt
 
-     ```
-     DB_HOST=localhost
-     DB_USER=root
-     DB_PASSWORD=yourpassword
-     DB_NAME=studyhub
-     FLASK_SECRET=kJDUFSyhgcdlkijougytjhbmsdkjxhj
-     ```
 
-5. **Ensure MySQL server is running** and reachable. The app will automatically create the database and `users` table if they don’t exist.
+Running the Application:
+Run the Main Application File
+Start the application by executing app.py.
 
-6. **Run the app**:
+Bash
+python app.py
 
-   ```bash
-   cd backend
-   python app.py
-   ```
+Access the Web Interface
+Once the server is running, you can access the registration page in your web browser at the following URL:
 
-7. **Access the authentication pages**:
-   Open your browser and go to:
-
-   ```
-   http://127.0.0.1:5000/studyhub_og/register.html
-   http://127.0.0.1:5000/studyhub_og/login.html
-   ```
-
-## Notes
-
-* If your frontend already has `register.html` and `login.html`, the backend will serve those pages and handle form POSTs to `/register` and `/login`.
-* Forms must use `method="post"` and inputs named:
-
-  * `username`
-  * `password`
-  * (optionally) `email`
-* After login, the backend redirects to `index.html` (if present) or `/protected` with a simple message.
-* Use `.env` to securely store DB credentials and the Flask secret key.
+http://127.0.0.1:5000/studyhub_og/register.html
+You should now see the application's registration page. If you encounter any issues, please check that all dependencies were installed correctly and that your virtual environment is active.
