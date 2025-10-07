@@ -20,8 +20,7 @@ FLASK_SECRET=RANDOM_STRING
 **Windows:**
 ```bash
 python -m venv venv
-.
-env\Scripts ctivate
+.\venv\Scripts\activate
 ```
 
 **macOS / Linux:**
